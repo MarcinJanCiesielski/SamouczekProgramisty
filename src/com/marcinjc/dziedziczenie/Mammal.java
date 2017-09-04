@@ -9,5 +9,4 @@ public abstract class Mammal extends Animal {
         numberOfLegs = legs;
     }
 
-    public abstract boolean equals(Human otherHuman);
 }

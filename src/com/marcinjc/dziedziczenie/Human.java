@@ -1,6 +1,6 @@
 package com.marcinjc.dziedziczenie;
 
-public class Human extends Mammal {
+public class Human extends com.marcinjc.dziedziczenie.Mammal {
     public final static int NUMBER_OF_LEGS = 2;
 
     public Human(String colour) {
@@ -11,4 +11,5 @@ public class Human extends Mammal {
     public String toString() {
         return "Species: Human, colour: " + colour + ", number of legs: " + NUMBER_OF_LEGS;
     }
+
 }
