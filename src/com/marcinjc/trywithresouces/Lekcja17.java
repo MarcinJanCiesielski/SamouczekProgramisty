@@ -38,16 +38,16 @@ public class Lekcja17 {
         }
     }
 
-    public static void tryWithResorces2(){
+    public static void tryWithResorces2() throws IOException {
         String inputPath = "C:\\file.txt";
         String outputPath = "C:\\file.txt";
 
-//        try(
-//                BufferedReader fileReader = new BufferedReader(new FileReader(inputPath));
-//                BufferedWriter fileWriter = new BufferedWriter(new FileWriter(outputPath));
-//        ) {
-//            String line = fileReader.readLine();
-//            fileWriter.write(line);
-//        }
+        try(
+                BufferedReader fileReader = new BufferedReader(new FileReader(inputPath));
+                BufferedWriter fileWriter = new BufferedWriter(new FileWriter(outputPath));
+        ) {
+            String line = fileReader.readLine();
+            fileWriter.write(line);
+        }
     }
 }
