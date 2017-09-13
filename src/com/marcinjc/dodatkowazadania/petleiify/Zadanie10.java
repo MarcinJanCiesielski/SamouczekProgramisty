@@ -16,7 +16,7 @@ public class Zadanie10 {
                 System.out.print(", ");
             }
         }
-        System.out.println("]");;
+        System.out.println("]");
     }
 
     public static int[] bubbleSort(int[] array){

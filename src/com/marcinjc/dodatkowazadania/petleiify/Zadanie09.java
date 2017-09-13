@@ -14,6 +14,6 @@ public class Zadanie09 {
                 System.out.print(", ");
             }
         }
-        System.out.println("]");;
+        System.out.println("]");
     }
 }

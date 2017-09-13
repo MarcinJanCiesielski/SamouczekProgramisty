@@ -44,7 +44,7 @@ public class Lekcja17 {
 
         try(
                 BufferedReader fileReader = new BufferedReader(new FileReader(inputPath));
-                BufferedWriter fileWriter = new BufferedWriter(new FileWriter(outputPath));
+                BufferedWriter fileWriter = new BufferedWriter(new FileWriter(outputPath))
         ) {
             String line = fileReader.readLine();
             fileWriter.write(line);

@@ -20,14 +20,14 @@ public class StaticSerialization implements Serializable{
     private static void secondExecution() throws IOException, ClassNotFoundException {
         try (ObjectInputStream input = new ObjectInputStream(new FileInputStream("static.bin"))) {
             StaticSerialization otherObject = (StaticSerialization) input.readObject();
-            System.out.println(otherObject.someField);
+            System.out.println(someField);
         }
     }
 
     private static void firstExecution() throws IOException {
         StaticSerialization object = new StaticSerialization();
-        object.someField = 200;
-        System.out.println(object.someField);
+        someField = 200;
+        System.out.println(someField);
 
         try (ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("static.bin"))) {
             output.writeObject(object);

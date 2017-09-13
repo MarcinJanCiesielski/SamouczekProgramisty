@@ -32,19 +32,11 @@ public class Matody {
     }
 
     public static boolean isParzysta(long liczba) { //zadanie04
-        if(liczba % 2 == 0){
-            return true;
-        } else {
-            return false;
-        }
+        return liczba % 2 == 0;
     }
 
     public static boolean isDividedBy3And5(long liczba){ //zadnie05
-        if(liczba % 3 == 0 && liczba % 5 == 0){
-            return true;
-        } else {
-            return false;
-        }
+        return liczba % 3 == 0 && liczba % 5 == 0;
     }
 
     public static long cube(long liczba){ //zadanie06
@@ -61,11 +53,7 @@ public class Matody {
 
     public static boolean triangle(int a, int b, int c){ //zadanie08
         int[] tab = new int[] {a,b,c};
-        if(Math.pow(c,2) == Math.pow(a,2) + Math.pow(b,2)){
-            return true;
-        }else {
-            return false;
-        }
+        return Math.pow(c, 2) == Math.pow(a, 2) + Math.pow(b, 2);
     }
 
 }

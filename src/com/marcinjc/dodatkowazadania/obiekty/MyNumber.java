@@ -9,19 +9,11 @@ public class MyNumber {
     }
 
     public boolean isEven(){
-        if(number % 2 == 0){
-            return true;
-        } else {
-            return false;
-        }
+        return number % 2 == 0;
     }
 
     public boolean isOdd(){
-        if(number % 2 != 0){
-            return true;
-        } else {
-            return false;
-        }
+        return number % 2 != 0;
     }
 
     public double square(){

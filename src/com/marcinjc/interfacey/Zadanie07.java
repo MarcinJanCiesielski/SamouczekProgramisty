@@ -27,11 +27,7 @@ public class Zadanie07 {
         Scanner scanner = new Scanner(System.in);
         String dzialanie = scanner.next();
         System.out.println(dzialanie);
-        if (dzialanie.equals(MULTIPLICATION)) {
-            return true;
-        } else {
-            return false;
-        }
+        return dzialanie.equals(MULTIPLICATION);
     }
 
     private double getArgument() {
