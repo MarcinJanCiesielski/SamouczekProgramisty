@@ -1,11 +1,10 @@
 package com.marcinjc.testdrivendevelopment.zadanie;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Subject {
     String subjectName;
-    Set<Integer> grades;
+    List<Integer> grades;
 
     public Subject(String subjectName){
         if(subjectName.equals(null)){
@@ -15,7 +14,7 @@ public class Subject {
             throw new IllegalArgumentException("You must enter proper subject's name");
         }
         this.subjectName = subjectName;
-        grades = new HashSet<Integer>();
+        grades = new ArrayList<Integer>();
     }
 
     public void addGrade(Integer grade){
@@ -24,5 +23,13 @@ public class Subject {
         } else {
             grades.add(grade);
         }
+    }
+
+    public double calculateGradesAverage(){
+        Integer sum = 0;
+        for (Integer grade: grades) {
+            sum += grade;
+        }
+        return (1.0 * sum) / grades.size();
     }
 }

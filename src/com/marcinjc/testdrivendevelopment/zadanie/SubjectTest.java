@@ -42,5 +42,37 @@ public class SubjectTest {
         fail();
     }
 
+    @Test
+    public void calculateGradesAverage_twoProperGrades_returnsProperAverage(){
+        final Integer grade1 = 3;
+        final Integer grade2 = 6;
+        final double average = 4.5;
 
+        final long NUMBERS_OF_GRADES = 1;
+        Subject subject = new Subject("English");
+        subject.addGrade(grade1);
+        subject.addGrade(grade2);
+
+        double avg = subject.calculateGradesAverage();
+
+        assertTrue(Math.abs(avg - average) < 0.00001);
+    }
+
+    @Test
+    public void calculateGradesAverage_threeProperGrades_returnsProperAverage(){
+        final Integer grade1 = 1;
+        final Integer grade2 = 6;
+        final Integer grade3 = 6;
+        final double average = 4.33333333;
+
+        final long NUMBERS_OF_GRADES = 1;
+        Subject subject = new Subject("English");
+        subject.addGrade(grade1);
+        subject.addGrade(grade2);
+        subject.addGrade(grade3);
+
+        double avg = subject.calculateGradesAverage();
+
+        assertTrue(Math.abs(avg - average) < 0.00001);
+    }
 }
