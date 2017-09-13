@@ -6,6 +6,7 @@ public class Subject {
     String subjectName;
     List<Integer> grades;
 
+
     public Subject(String subjectName){
         if(subjectName.equals(null)){
             throw new NullPointerException();
@@ -32,4 +33,20 @@ public class Subject {
         }
         return (1.0 * sum) / grades.size();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Subject subject = (Subject) o;
+
+        return subjectName.equals(subject.subjectName);
+    }
+
+    @Override
+    public int hashCode() {
+        return subjectName.hashCode();
+    }
+
 }

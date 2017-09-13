@@ -60,9 +60,9 @@ public class SubjectTest {
 
     @Test
     public void calculateGradesAverage_threeProperGrades_returnsProperAverage(){
-        final Integer grade1 = 1;
+        final Integer grade1 = 3;
         final Integer grade2 = 6;
-        final Integer grade3 = 6;
+        final Integer grade3 = 4;
         final double average = 4.33333333;
 
         final long NUMBERS_OF_GRADES = 1;
