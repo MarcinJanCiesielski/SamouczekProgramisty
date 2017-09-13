@@ -2,7 +2,9 @@ package com.marcinjc.testdrivendevelopment.zadanie;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 public class SubjectTest {
 
@@ -22,4 +24,23 @@ public class SubjectTest {
         String subjectName = null;
         Subject subject = new Subject(subjectName);
     }
+
+    @Test
+    public void addGrade_properGrade_returnSubjekctWithAddedGrade(){
+        final long NUMBERS_OF_GRADES = 1;
+        Subject subject = new Subject("English");
+        subject.addGrade(5);
+        assertEquals(subject.grades.size(),NUMBERS_OF_GRADES);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void addGrade_inproperGrade_throwsIllegalArgumentException(){
+        final long NUMBERS_OF_GRADES = 0;
+        Integer inpropperGrade = 7;
+        Subject subject = new Subject("English");
+        subject.addGrade(inpropperGrade);
+        fail();
+    }
+
+
 }

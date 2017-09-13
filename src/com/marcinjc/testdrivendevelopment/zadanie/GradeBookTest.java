@@ -2,6 +2,7 @@ package com.marcinjc.testdrivendevelopment.zadanie;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class GradeBookTest {
@@ -23,5 +24,26 @@ public class GradeBookTest {
         GradeBook gb = new GradeBook(pupilName);
     }
 
+    @Test
+    public void addSubject_properSubject_returnOneSubjectInGradeBook(){
+        int NUMBER_OF_SUBJECTS = 1;
+        GradeBook gb = new GradeBook("Marcin Ciesielski");
+        Subject subject = new Subject("English");
+        gb.addSubject(subject);
+        assertEquals(gb.subjects.size(),NUMBER_OF_SUBJECTS);
+    }
 
+    @Test
+    public void addSubject_nullSubject_returnZeroSubjectInGradeBook(){
+        int NUMBER_OF_SUBJECTS = 0;
+        GradeBook gb = new GradeBook("Marcin Ciesielski");
+        Subject subject = null;
+        gb.addSubject(subject);
+        assertEquals(gb.subjects.size(),NUMBER_OF_SUBJECTS);
+    }
+
+    @Test
+    public void addSubject_addSubjectWhichAlreadyIsInGradeBook_returnsOldSubjectsSet(){
+
+    }
 }
